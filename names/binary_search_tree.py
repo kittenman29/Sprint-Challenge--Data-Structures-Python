@@ -1,14 +1,3 @@
-import time
-start_time = time.time()
-
-f = open('names_1.txt', 'r')
-names_1 = f.read().split("\n")  # List containing 10000 names
-f.close()
-
-f = open('names_2.txt', 'r')
-names_2 = f.read().split("\n")  # List containing 10000 names
-f.close()
-
 class BinarySearchTree:
   def __init__(self, value):
     self.value = value
@@ -62,24 +51,14 @@ class BinarySearchTree:
       self.left.for_each(cb)
     if self.right:
       self.right.for_each(cb)
+          
 
-bst2 = BinarySearchTree(names_2[0])
-for x in names_2:
-    bst2.insert(x)
-# print(bst2)
-
-# duplicates = []
-# for name_1 in names_1:
-#     for name_2 in names_2:
-#         if name_1 == name_2:
-#             duplicates.append(name_1)
-duplicates = []
-for name_1 in names_1:
-    if bst2.contains(name_1):
-        duplicates.append(name_1)
-        
-
-end_time = time.time()
-print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
-print (f"runtime: {end_time - start_time} seconds")
-
+# bst = BinarySearchTree(5)
+# bst.insert(5)
+# bst.insert(8)
+# bst.insert(2)
+# bst.insert(14)
+# print(f"bst: {bst.value}")
+# print(f"left: {bst.left.value}")
+# print(f"right: {bst.right.value}")
+# print(f"left contains: {bst.contains(8)}")
