@@ -20,6 +20,7 @@ for name_1 in names_1:
     if name_1 in names_2:
         # if name_1 == name_2:
         duplicates.append(name_1)
+        #can't figure out what time complexity is
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
